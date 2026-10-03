@@ -248,13 +248,37 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.08);padding-block:
   *{animation:none!important;transition:none!important;}
   .js .reveal{opacity:1!important;transform:none!important;}
 }
+/* ===== AUDIT FORM ===== */
+#audit-form{padding-block:clamp(90px,13vw,150px);background:var(--secondary);overflow:hidden;}
+.audit-card{max-width:720px;margin-inline:auto;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:clamp(26px,5vw,44px);backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,.45);}
+.audit-eyebrow{margin:0 0 10px;font-family:'Inter';font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--steel);}
+.audit-head{margin:0 0 8px;font-family:'Inter';font-weight:900;color:#fff;font-size:clamp(1.6rem,4vw,2rem);letter-spacing:-.02em;}
+.audit-lede{margin:0 0 32px;color:#9aa2ad;font-size:1rem;}
+.audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.audit-field{display:flex;flex-direction:column;min-width:0;}
+.audit-field--full{grid-column:1 / -1;}
+.audit-field label{font-family:'Inter';font-size:13px;font-weight:600;letter-spacing:.01em;margin-bottom:8px;color:#d7dce2;}
+.audit-req{color:var(--steel);margin-left:2px;}
+.audit-optional{font-weight:400;color:#6e7681;margin-left:4px;}
+.audit-field input,.audit-field select{width:100%;height:48px;padding:0 14px;font-family:'Inter';font-size:15px;color:#fff;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);border-radius:10px;transition:border-color .2s,box-shadow .2s;}
+.audit-field input::placeholder{color:#6e7681;}
+.audit-field input:hover,.audit-field select:hover{border-color:rgba(255,255,255,.3);}
+.audit-field input:focus,.audit-field select:focus{outline:none;border-color:var(--steel);box-shadow:0 0 0 3px rgba(90,122,158,.25);}
+.audit-field select{appearance:none;-webkit-appearance:none;padding-right:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' stroke='%239aa2ad' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;cursor:pointer;}
+.audit-field select option{color:#0b1f3a;background:#fff;}
+.audit-hint{margin:7px 0 0;font-size:12.5px;color:#6e7681;}
+.audit-actions{margin-top:28px;}
+.audit-submit{width:100%;height:52px;font-family:'Inter';font-size:15.5px;font-weight:700;color:#000;background:var(--accent);border:0;border-radius:10px;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;}
+.audit-submit:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(174,194,219,.4);}
+.audit-note{margin:14px 0 0;font-size:12.5px;color:#6e7681;text-align:center;}
+@media(max-width:600px){.audit-grid{grid-template-columns:1fr;gap:18px;}}
 </style>
 <style id="htmlpub-breakpoint-visibility">@media (max-width: 767px) { .hp-hide-mobile { display: none !important; } }
 @media (min-width: 768px) and (max-width: 1199px) { .hp-hide-tablet { display: none !important; } }
 @media (min-width: 1200px) { .hp-hide-desktop { display: none !important; } }</style></head>
 <body>
 
-<div id="loader" aria-hidden="true">
+<div id="loader" aria-hidden="true" style="">
   <div class="loader-track"><div class="loader-bar"></div></div>
   <div class="loader-label">Installing your revenue function</div>
 </div>
@@ -270,7 +294,7 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.08);padding-block:
       <a href="#faq">FAQ</a>
       <a href="/search" class="nav-search">Search</a>
     </nav>
-    <a href="#final-cta" class="btn">Book a Paid Revenue Assessment</a>
+    <a href="#audit-form" class="btn">Book a Paid Revenue Assessment</a>
   </div>
 </header>
 
@@ -292,7 +316,7 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.08);padding-block:
       <span>Follow Up</span><span class="dot">·</span>
       <span>Recover</span>
     </div>
-    <a href="#final-cta" class="btn hero-cta reveal in">Book a Paid Revenue Assessment</a>
+    <a href="#audit-form" class="btn hero-cta reveal in">Book a Paid Revenue Assessment</a>
   </div>
 </section>
 
@@ -433,7 +457,7 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.08);padding-block:
       <div class="ms-panel reveal in"><div class="ms-live">Live</div><div class="ms-val" style="font-size:clamp(1.1rem,2.6vw,1.5rem)">2 min ago</div><div class="ms-label">Last customer activity</div></div>
     </div>
     <p class="ms-quote reveal in">Not another AI tool. <b>A revenue system you can actually measure.</b></p>
-    <a href="#final-cta" class="btn reveal in" style="font-size:15px;padding:16px 30px;">Book a Paid Revenue Assessment</a>
+    <a href="#audit-form" class="btn reveal in" style="font-size:15px;padding:16px 30px;">Book a Paid Revenue Assessment</a>
   </div>
 </section>
 
@@ -469,7 +493,7 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.08);padding-block:
   <div class="container">
     <h2 class="fc-head reveal in">Ready to see what Revenue Lift OS could do for your business?</h2>
     <p class="fc-copy reveal in">We'll look at your current revenue process, identify where opportunities are being lost and show you where an AI-powered revenue function could create the biggest impact.</p>
-    <a href="#" class="btn fc-cta reveal in">Book Your Paid Revenue Assessment</a>
+    <a href="#audit-form" class="btn fc-cta reveal in">Book Your Paid Revenue Assessment</a>
     <p class="fc-reassure reveal in">No complicated AI strategy. No massive transformation project. Just a practical way to make your revenue operation work better.</p>
     <div class="fc-out reveal in">
       <span>Capture more opportunities</span><span class="dot">·</span>
@@ -478,6 +502,53 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.08);padding-block:
       <span>Book more appointments</span><span class="dot">·</span>
       <span>Recover lost revenue</span><span class="dot">·</span>
       <span>without continuously adding more people</span>
+    </div>
+  </div>
+</section>
+
+<section id="audit-form">
+  <div class="container">
+    <div class="audit-card reveal in">
+      <form name="paid-audit-request" data-success-message="Request received. Thanks — we've got your details and will be in touch within one business day with next steps for your paid audit.">
+        <p class="audit-eyebrow">Paid Service</p>
+        <h2 class="audit-head">Request a paid audit</h2>
+        <p class="audit-lede">Tell us a little about your business.</p>
+        <div class="audit-grid">
+          <div class="audit-field">
+            <label for="fullName">Full Name<span class="audit-req" aria-hidden="true">*</span></label>
+            <input type="text" id="fullName" name="full_name" autocomplete="name" placeholder="Jane Doe" required="">
+          </div>
+          <div class="audit-field">
+            <label for="companyName">Company Name<span class="audit-req" aria-hidden="true">*</span></label>
+            <input type="text" id="companyName" name="company_name" autocomplete="organization" placeholder="Acme Inc." required="">
+          </div>
+          <div class="audit-field audit-field--full">
+            <label for="email">Work Email<span class="audit-req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="jane@company.com" required="">
+            <p class="audit-hint">We'll send the audit and any follow-up questions here.</p>
+          </div>
+          <div class="audit-field">
+            <label for="country">Country<span class="audit-req" aria-hidden="true">*</span></label>
+            <select id="country" name="country" required="">
+              <option value="" disabled="" selected="">Select country…</option>
+              <option>Afghanistan</option><option>Albania</option><option>Algeria</option><option>Andorra</option><option>Angola</option><option>Argentina</option><option>Armenia</option><option>Australia</option><option>Austria</option><option>Azerbaijan</option><option>Bahamas</option><option>Bahrain</option><option>Bangladesh</option><option>Barbados</option><option>Belarus</option><option>Belgium</option><option>Belize</option><option>Benin</option><option>Bhutan</option><option>Bolivia</option><option>Bosnia and Herzegovina</option><option>Botswana</option><option>Brazil</option><option>Brunei</option><option>Bulgaria</option><option>Burkina Faso</option><option>Burundi</option><option>Cambodia</option><option>Cameroon</option><option>Canada</option><option>Cape Verde</option><option>Chad</option><option>Chile</option><option>China</option><option>Colombia</option><option>Costa Rica</option><option>Croatia</option><option>Cyprus</option><option>Czechia</option><option>Denmark</option><option>Dominican Republic</option><option>Ecuador</option><option>Egypt</option><option>El Salvador</option><option>Estonia</option><option>Eswatini</option><option>Ethiopia</option><option>Fiji</option><option>Finland</option><option>France</option><option>Gabon</option><option>Georgia</option><option>Germany</option><option>Ghana</option><option>Greece</option><option>Guatemala</option><option>Honduras</option><option>Hong Kong SAR</option><option>Hungary</option><option>Iceland</option><option>India</option><option>Indonesia</option><option>Iraq</option><option>Ireland</option><option>Israel</option><option>Italy</option><option>Jamaica</option><option>Japan</option><option>Jordan</option><option>Kazakhstan</option><option>Kenya</option><option>Kuwait</option><option>Kyrgyzstan</option><option>Laos</option><option>Latvia</option><option>Lebanon</option><option>Libya</option><option>Liechtenstein</option><option>Lithuania</option><option>Luxembourg</option><option>Madagascar</option><option>Malawi</option><option>Malaysia</option><option>Maldives</option><option>Malta</option><option>Mauritius</option><option>Mexico</option><option>Moldova</option><option>Monaco</option><option>Mongolia</option><option>Montenegro</option><option>Morocco</option><option>Mozambique</option><option>Myanmar</option><option>Namibia</option><option>Nepal</option><option>Netherlands</option><option>New Zealand</option><option>Nicaragua</option><option>Nigeria</option><option>North Macedonia</option><option>Norway</option><option>Oman</option><option>Pakistan</option><option>Panama</option><option>Paraguay</option><option>Peru</option><option>Philippines</option><option>Poland</option><option>Portugal</option><option>Qatar</option><option>Romania</option><option>Rwanda</option><option>Saudi Arabia</option><option>Senegal</option><option>Serbia</option><option>Singapore</option><option>Slovakia</option><option>Slovenia</option><option>South Africa</option><option>South Korea</option><option>Spain</option><option>Sri Lanka</option><option>Sweden</option><option>Switzerland</option><option>Taiwan</option><option>Tanzania</option><option>Thailand</option><option>Tunisia</option><option>Turkey</option><option>Uganda</option><option>Ukraine</option><option>United Arab Emirates</option><option>United Kingdom</option><option>United States</option><option>Uruguay</option><option>Uzbekistan</option><option>Venezuela</option><option>Vietnam</option><option>Yemen</option><option>Zambia</option><option>Zimbabwe</option><option>Other</option>
+            </select>
+          </div>
+          <div class="audit-field">
+            <label for="phone">Phone Number<span class="audit-req" aria-hidden="true">*</span></label>
+            <span data-persist-phone-field="" style="display:flex;align-items:stretch;gap:6px;width:100%;position:relative;"><input type="tel" id="phone" name="phone" data-persist-phone="" data-persist-phone-country="US" autocomplete="tel" inputmode="tel" placeholder="Phone number" required="" style="flex: 1 1 auto; min-width: 0px;"></span>
+            <p class="audit-hint">Pick your country above and the dialing code is added automatically.</p>
+          </div>
+          <div class="audit-field audit-field--full">
+            <label for="source">How did you hear about us?<span class="audit-optional">(optional)</span></label>
+            <input type="text" id="source" name="source" placeholder="e.g. Referral, LinkedIn, Google…">
+          </div>
+        </div>
+        <div class="audit-actions">
+          <button type="submit" class="audit-submit">Request a paid audit</button>
+          <p class="audit-note">We'll reply within one business day with scope and pricing.</p>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -554,6 +625,22 @@ document.querySelectorAll('.faq-q').forEach(q=>{
     if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
   });
 });
-</script>
-<noscript><style>[class*="reveal"],[data-reveal],[data-animate],.fade-in,.fade-up,.scroll-reveal,.animate-in{opacity:1!important;transform:none!important;visibility:visible!important}</style></noscript><script id="hp-reveal-safety">(function(){var S='[class*="reveal"],[data-reveal],[data-animate],.fade-in,.fade-up,.scroll-reveal,.animate-in';function v(e){e.style.setProperty('opacity','1','important');e.style.setProperty('transform','none','important');e.style.setProperty('visibility','visible','important');}function sweep(){try{var n=document.querySelectorAll(S),h=(window.innerHeight||document.documentElement.clientHeight||0)*1.25,i,e,r;for(i=0;i<n.length;i++){e=n[i];r=e.getBoundingClientRect();if(r.top<h&&r.bottom>-1&&parseFloat(getComputedStyle(e).opacity)===0)v(e);}}catch(_){}}var t;function s(){if(t)return;t=setTimeout(function(){t=0;sweep();},200);}if(document.readyState==='complete'){setTimeout(sweep,1200);}else{window.addEventListener('load',function(){setTimeout(sweep,1200);});}window.addEventListener('scroll',s,{passive:true});window.addEventListener('resize',s,{passive:true});})();</script>
+// Phone country follows the Country dropdown
+(function(){
+  var map={"Afghanistan":"AF","Albania":"AL","Algeria":"DZ","Andorra":"AD","Angola":"AO","Argentina":"AR","Armenia":"AM","Australia":"AU","Austria":"AT","Azerbaijan":"AZ","Bahamas":"BS","Bahrain":"BH","Bangladesh":"BD","Barbados":"BB","Belarus":"BY","Belgium":"BE","Belize":"BZ","Benin":"BJ","Bhutan":"BT","Bolivia":"BO","Bosnia and Herzegovina":"BA","Botswana":"BW","Brazil":"BR","Brunei":"BN","Bulgaria":"BG","Burkina Faso":"BF","Burundi":"BI","Cambodia":"KH","Cameroon":"CM","Canada":"CA","Cape Verde":"CV","Chad":"TD","Chile":"CL","China":"CN","Colombia":"CO","Costa Rica":"CR","Croatia":"HR","Cyprus":"CY","Czechia":"CZ","Denmark":"DK","Dominican Republic":"DO","Ecuador":"EC","Egypt":"EG","El Salvador":"SV","Estonia":"EE","Eswatini":"SZ","Ethiopia":"ET","Fiji":"FJ","Finland":"FI","France":"FR","Gabon":"GA","Georgia":"GE","Germany":"DE","Ghana":"GH","Greece":"GR","Guatemala":"GT","Honduras":"HN","Hong Kong SAR":"HK","Hungary":"HU","Iceland":"IS","India":"IN","Indonesia":"ID","Iraq":"IQ","Ireland":"IE","Israel":"IL","Italy":"IT","Jamaica":"JM","Japan":"JP","Jordan":"JO","Kazakhstan":"KZ","Kenya":"KE","Kuwait":"KW","Kyrgyzstan":"KG","Laos":"LA","Latvia":"LV","Lebanon":"LB","Libya":"LY","Liechtenstein":"LI","Lithuania":"LT","Luxembourg":"LU","Madagascar":"MG","Malawi":"MW","Malaysia":"MY","Maldives":"MV","Malta":"MT","Mauritius":"MU","Mexico":"MX","Moldova":"MD","Monaco":"MC","Mongolia":"MN","Montenegro":"ME","Morocco":"MA","Mozambique":"MZ","Myanmar":"MM","Namibia":"NA","Nepal":"NP","Netherlands":"NL","New Zealand":"NZ","Nicaragua":"NI","Nigeria":"NG","North Macedonia":"MK","Norway":"NO","Oman":"OM","Pakistan":"PK","Panama":"PA","Paraguay":"PY","Peru":"PE","Philippines":"PH","Poland":"PL","Portugal":"PT","Qatar":"QA","Romania":"RO","Rwanda":"RW","Saudi Arabia":"SA","Senegal":"SN","Serbia":"RS","Singapore":"SG","Slovakia":"SK","Slovenia":"SI","South Africa":"ZA","South Korea":"KR","Spain":"ES","Sri Lanka":"LK","Sweden":"SE","Switzerland":"CH","Taiwan":"TW","Tanzania":"TZ","Thailand":"TH","Tunisia":"TN","Turkey":"TR","Uganda":"UG","Ukraine":"UA","United Arab Emirates":"AE","United Kingdom":"GB","United States":"US","Uruguay":"UY","Uzbekistan":"UZ","Venezuela":"VE","Vietnam":"VN","Yemen":"YE","Zambia":"ZM","Zimbabwe":"ZW"};
+  var country=document.getElementById('country');
+  var phone=document.getElementById('phone');
+  if(country&&phone){
+    country.addEventListener('change',function(){
+      var iso=map[country.value];
+      if(iso){
+        phone.removeAttribute('data-persist-phone');
+        void phone.offsetWidth;
+        phone.setAttribute('data-persist-phone','');
+        phone.setAttribute('data-persist-phone-country',iso);
+      }
+    });
+  }
+})();
+</script><style>[class*="reveal"],[data-reveal],[data-animate],.fade-in,.fade-up,.scroll-reveal,.animate-in{opacity:1!important;transform:none!important;visibility:visible!important}</style><script id="hp-reveal-safety">(function(){var S='[class*="reveal"],[data-reveal],[data-animate],.fade-in,.fade-up,.scroll-reveal,.animate-in';function v(e){e.style.setProperty('opacity','1','important');e.style.setProperty('transform','none','important');e.style.setProperty('visibility','visible','important');}function sweep(){try{var n=document.querySelectorAll(S),h=(window.innerHeight||document.documentElement.clientHeight||0)*1.25,i,e,r;for(i=0;i<n.length;i++){e=n[i];r=e.getBoundingClientRect();if(r.top<h&&r.bottom>-1&&parseFloat(getComputedStyle(e).opacity)===0)v(e);}}catch(_){}}var t;function s(){if(t)return;t=setTimeout(function(){t=0;sweep();},200);}if(document.readyState==='complete'){setTimeout(sweep,1200);}else{window.addEventListener('load',function(){setTimeout(sweep,1200);});}window.addEventListener('scroll',s,{passive:true});window.addEventListener('resize',s,{passive:true});})();</script>
 </body></html>
